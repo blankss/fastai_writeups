@@ -26,15 +26,30 @@
         - The difference between these two probabilities is a utility function for a given recomendation to a customer
         - Low in cases where algo recommends a familiar book that customer has already rejected 
 9. Create an image recognition model using data you curate, and deploy it on the web.
+    - Done through ```minimal``` in lecture 2 video and chapter 2 of the book.
 10. What is DataLoaders?
+    - DataLoaders is a class that stores whatever DataLoader objects you pass to it and makes them available to train and valid.
 11. What four things do we need to tell fastai to create DataLoaders?
+    - What kinds of data we are working with
+    - How to get list of items
+    - How to label these items
+    - How to create the validation set
 12. What does the splitter parameter to DataBlock do?
+    - The splitter parameter decides how to split the data into the validation set. You can also pass in a seed so the program knows to use the same random set of data for the validation set every time.
 13. How do we ensure a random split always gives the same validation set?
+    - Set a seed, can be any number. You then need to use that number everytime you want the same validation set.
 14. What letters are often used to signify the independent and dependent variables?
+    - x for independent and y for dependent
 15. What's the difference between the crop, pad, and squish resize approaches? When might you choose one over the others?
+    - Crop: crops the image to the desired size that you pass in for the DataBlock, might cut out important details though.
+    - Pad: pads the image with a specific color to fit the size
+    - Squish: squishes the original size to the fixed size, usually the size we enter is smaller than original size to save space and increase efficiency
 16. What is data augmentation? Why is it needed?
+    - Data augmentation is a process of artificially increasing the number of data we can use to train by transforming original pictures either by stretching, cropping, saturating, etc.
 17. What is the difference between item_tfms and batch_tfms?
+    - 
 18. What is a confusion matrix?
+    - A confusion matrix maps out the Actual on the y-axis, predicted on the x-axis, and the plots are filled with the actual vs predicted information. This way, we can easily see where our model gets the most confused on which type of bear they are identifying.
 19. What does export save?
 20. What is it called when we use a model for getting predictions, instead of training?
 21. What are IPython widgets?
